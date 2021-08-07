@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--  TOOLBAR GROUP  -->
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="16dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circle_shape"
+            android:src="@drawable/ic_man" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/message"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:ignore="RelativeOverlap" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_edit" />
+
+        </RelativeLayout>
+    <!--  END GROUP  -->
+
+    <!--  MAIN CONTENT  -->
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="75dp"
+        android:layout_below="@+id/toolbar">
+
+        <!--  FIRST SECTION  -->
+        <LinearLayout
+            android:id="@+id/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--    GROUP SEARCH    -->
+            <LinearLayout
+                style="@style/GroupStyle"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <androidx.cardview.widget.CardView
+                    style="@style/CardStyle"
+                    android:elevation="16dp"
+                    app:cardCornerRadius="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginEnd="6dp"
+                            android:src="@drawable/ic_search" />
+
+                        <EditText
+                            android:id="@+id/txt_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:hint="@string/find_workshop_or_conversation"
+                            android:inputType="text"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <!--    END GROUP    -->
+
+            <!--    GROUP STORY    -->
+            <HorizontalScrollView
+                android:id="@+id/stories"
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    style="@style/GroupStyle"
+                    android:layout_marginStart="8dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            style="@style/CircleImage"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:background="@drawable/circle_shape"
+                            android:backgroundTint="@color/gray_light"
+                            android:padding="12dp"
+                            android:src="@drawable/ic_add"/>
+
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add"
+                            style="@style/CardDetails"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            style="@style/CircleImage"
+                            android:background="@drawable/circle_shape"
+                            android:src="@drawable/ic_boy" />
+
+                            <TextView 
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rober"
+                                style="@style/CardDetails"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            style="@style/CircleImage"
+                            android:background="@drawable/circle_shape"
+                            android:src="@drawable/ic_boy_1" />
+
+                        <TextView 
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/alexa"
+                                style="@style/CardDetails"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            style="@style/CircleImage"
+                            android:background="@drawable/circle_shape"
+                            android:src="@drawable/ic_girl_1" />
+
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mccoy"
+                            style="@style/CardDetails"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/CircleImage"
+                        android:background="@drawable/circle_shape"
+                        android:src="@drawable/ic_girl" />
+
+                    <TextView 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lane"
+                        style="@style/CardDetails"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/CircleImage"
+                        android:background="@drawable/circle_shape"
+                        android:src="@drawable/ic_man" />
+
+                    <TextView 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ahmed"
+                        style="@style/CardDetails"/>
+                </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+            <!--    END GROUP    -->
+
+
+            <!--    GROUP WORKSHOP    -->
+            <LinearLayout
+                style="@style/GroupStyle"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/stories">
+
+                <TextView 
+                    style="@style/CardTitle"
+                    android:text="@string/workshop" />
+
+                <androidx.cardview.widget.CardView
+                    style="@style/CardStyle"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:elevation="16dp"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!--    CARD ITEM    -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="56dp"
+                                android:layout_height="56dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="8dp"
+                                    android:src="@drawable/ic_boy" />
+
+                            <ImageView
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:background="@drawable/circle_active"/>
+                            </RelativeLayout>
+                                
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView 
+                                        style="@style/CardTitle"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerInParent="true"
+                                        android:text="@string/darlene_robertson"
+                                        android:textSize="16sp" />
+
+                                    <TextView 
+                                        style="@style/CardStatus"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerInParent="true"
+                                        android:text="@string/now"/>
+                                </RelativeLayout>
+
+                                <TextView 
+                                    style="@style/CardDetails"
+                                    android:text="@string/how_are_you_doing" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerInParent="true"
+                                        android:paddingTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_boy" />
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="-6dp"
+                                            android:layout_marginEnd="-6dp"
+                                            android:src="@drawable/ic_boy_1" />
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_man" />
+
+                                        <TextView 
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="-6dp"
+                                            android:background="@drawable/circle_shape"
+                                            android:gravity="center"
+                                            android:text="@string/_8"
+                                            android:textSize="10sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <TextView 
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/circle_shape"
+                                        android:backgroundTint="@color/purple"
+                                        android:text="@string/_12"
+                                        android:textColor="@color/white"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <!--    END ITEM    -->
+
+                        <!--      LINE      -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp"
+                            android:layout_marginStart="75dp"
+                            android:background="@drawable/line_shape" />
+                        <!--      END LINE      -->
+
+                        <!--    CARD ITEM    -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="56dp"
+                                android:layout_height="56dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="8dp"
+                                    android:src="@drawable/ic_girl_1" />
+
+                                <ImageView
+                                    android:layout_marginBottom="4dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:background="@drawable/circle_active"/>
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView 
+                                        style="@style/CardTitle"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerInParent="true"
+                                        android:text="@string/robert_fox"
+                                        android:textSize="16sp" />
+
+                                    <TextView 
+                                        style="@style/CardStatus"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerInParent="true"
+                                        android:text="@string/_1_hour" />
+                                </RelativeLayout>
+
+                                <TextView 
+                                    style="@style/CardDetails"
+                                    android:text="@string/how_is_going_on_everything" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerInParent="true"
+                                        android:paddingTop="8dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_girl_1" />
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="-6dp"
+                                            android:layout_marginEnd="-6dp"
+                                            android:src="@drawable/ic_girl" />
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ic_man" />
+
+                                        <TextView 
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="-6dp"
+                                            android:background="@drawable/circle_shape"
+                                            android:gravity="center"
+                                            android:text="@string/_8"
+                                            android:textSize="10sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <TextView 
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/circle_shape"
+                                        android:backgroundTint="@color/purple"
+                                        android:gravity="center"
+                                        android:text="@string/_12"
+                                        android:textColor="@color/white"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <!--    END ITEM    -->
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+            <!--    END GROUP    -->
+
+            <!--    GROUP FRIENDS    -->
+            <LinearLayout
+                style="@style/GroupStyle"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/stories">
+
+                <TextView 
+                    style="@style/CardTitle"
+                    android:text="@string/friends" />
+
+                <androidx.cardview.widget.CardView
+                    style="@style/CardStyle"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:elevation="16dp"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!--    CARD ITEM    -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="56dp"
+                                android:layout_height="56dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="8dp"
+                                    android:src="@drawable/ic_girl" />
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:background="@drawable/circle_active" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView 
+                                        style="@style/CardTitle"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerInParent="true"
+                                        android:text="@string/jerome_bell"
+                                        android:textSize="16sp" />
+
+                                    <TextView 
+                                        style="@style/CardStatus"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerInParent="true"
+                                        android:text="@string/yesterday" />
+                                </RelativeLayout>
+
+                                <TextView 
+                                    style="@style/CardStatus"
+                                    android:text="@string/when_will_you_join" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <!--    END ITEM    -->
+
+                        <!--      LINE      -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp"
+                            android:layout_marginStart="75dp"
+                            android:background="@drawable/line_shape" />
+                        <!--      END LINE      -->
+
+                        <!--    CARD ITEM    -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="56dp"
+                                android:layout_height="56dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="8dp"
+                                    android:src="@drawable/ic_boy_1" />
+
+                                <ImageView
+                                    android:layout_marginBottom="4dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:background="@drawable/circle_active"/>
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView 
+                                        style="@style/CardTitle"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerInParent="true"
+                                        android:text="@string/marvin_mckinney"
+                                        android:textSize="16sp" />
+
+                                    <TextView 
+                                        style="@style/CardStatus"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerInParent="true"
+                                        android:text="@string/today" />
+                                </RelativeLayout>
+
+                                <TextView 
+                                    style="@style/CardStatus"
+                                    android:text="@string/how_long_time_will_take" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <!--    END ITEM    -->
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+            <!--    END GROUP    -->
+
+        </LinearLayout>
+        <!--  END SECTION  -->
+
+    </ScrollView>
+    <!--  END MAIN CONTENT  -->
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@drawable/radius_nav"
+            app:itemIconTint="@color/gray"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/bottom_nav_menu" >
+
+        <ImageView
+            android:layout_gravity="right|center"
+            android:layout_marginRight="22dp"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/circle_shape"
+            android:src="@drawable/ic_man" />
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+</RelativeLayout>

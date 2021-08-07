@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Messenger</string>
+    <string name="message">Message</string>
+    <string name="find_workshop_or_conversation">Find workshop or conversation</string>
+    <string name="workshop">Workshop</string>
+    <string name="darlene_robertson">Darlene Robertson</string>
+    <string name="how_are_you_doing">How are you doing.</string>
+    <string name="now">Now</string>
+    <string name="_12">12</string>
+    <string name="_8">+8</string>
+    <string name="friends">Friends</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="today">Today</string>
+    <string name="robert_fox">Robert Fox</string>
+    <string name="_1_hour">1 hour</string>
+    <string name="how_is_going_on_everything">How is going on everything</string>
+    <string name="jerome_bell">Jerome Bell</string>
+    <string name="when_will_you_join">When will you join?</string>
+    <string name="marvin_mckinney">Marvin McKinney</string>
+    <string name="how_long_time_will_take">How long time will take?</string>
+    <string name="add">Add</string>
+    <string name="rober">Rober</string>
+    <string name="alexa">Alexa</string>
+    <string name="mccoy">McCoy</string>
+    <string name="lane">Lane</string>
+    <string name="ahmed">Ahmed</string>
+</resources>
